@@ -1,5 +1,7 @@
 package ie.tudublin;
 
+import processing.data.TableRow;
+
 public class Nematode {
     
     //declaring variables
@@ -81,6 +83,14 @@ public class Nematode {
     }
 
     //a constructor that takes a TableRow parameter 
-    //from the Processing library as a parameter ??
+    //from the Processing library as a parameter
+    public Nematode(TableRow rows)
+    {      
+        rows.getString("Name");
+        rows.getInt("Length");
+        rows.getInt("Limbs");
+        rows.getString("Gender");
+        rows.getInt("Eyes");
+    }
 
 }
