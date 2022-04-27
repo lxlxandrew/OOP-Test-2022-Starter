@@ -77,8 +77,12 @@ public class Nematode {
     //toString methods
     public String toString()
     {
-        return "Nematode {Name: " + nemaName + " Length: " + nemaLength + "Limbs: " + nemaLimbs +
-                    " Gender: " + nemaGender + " Eyes : " + nemaEyes;
+        return "Nematode [Name: " + nemaName 
+                + " Length: " + nemaLength 
+                + "Limbs: " + nemaLimbs 
+                + " Gender: " + nemaGender 
+                + " Eyes : " + nemaEyes 
+                + "]";
         
     }
 
@@ -86,11 +90,12 @@ public class Nematode {
     //from the Processing library as a parameter
     public Nematode(TableRow rows)
     {      
-        rows.getString("Name");
-        rows.getInt("Length");
-        rows.getInt("Limbs");
-        rows.getString("Gender");
-        rows.getInt("Eyes");
+        nemaName = rows.getString("name");
+        nemaLength = rows.getInt("length");
+        nemaLimbs = (rows.getInt("limbs") == 1);
+        nemaGender = rows.getString("gender");
+        nemaEyes = (rows.getInt("eyes") == 1);
+        
     }
 
 }

@@ -8,10 +8,6 @@ import processing.data.TableRow;
 
 public class NematodeVisualiser extends PApplet
 {
-
-	//creating array list for nematode object
-	ArrayList<Nematode> nematode = new ArrayList<Nematode>();
-
 	public void keyPressed()
 	{		
 		if (keyCode == LEFT)
@@ -29,13 +25,18 @@ public class NematodeVisualiser extends PApplet
 	{
 		colorMode(HSB);
 		background(0);
-		smooth();				
+		smooth();	
+		loadNematodes();			
 	}
 	
 
+	//creating array list for nematode object
+	ArrayList<Nematode> nematode = new ArrayList<Nematode>();
+
 	public void loadNematodes()
 	{
-		Table nematodeTable = loadTable("nematode.csv", "header");
+		//loading the csv file and adding to array list
+		Table nematodeTable = loadTable("nematodes.csv", "header");
         for(TableRow rows:nematodeTable.rows())
         {
             Nematode newNema = new Nematode(rows);
@@ -43,8 +44,10 @@ public class NematodeVisualiser extends PApplet
         }
 	}
 
-
 	public void draw()
 	{	
+		//for loop for nematodes?
+		//for(Nematode Nematode:nematode){}
+		circle(200, 200, 50);
 	}
 }
