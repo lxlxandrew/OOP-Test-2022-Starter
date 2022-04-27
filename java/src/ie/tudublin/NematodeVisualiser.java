@@ -47,7 +47,21 @@ public class NematodeVisualiser extends PApplet
 	public void draw()
 	{	
 		//for loop for nematodes?
-		//for(Nematode Nematode:nematode){}
-		circle(200, 200, 50);
+		for(Nematode nema:nematode){
+
+			noFill();
+			stroke(255);
+			circle(200, 200, 50);
+			circle(200, 250, 50);
+			circle(200, 300, 50);
+			circle(200, 350, 50);
+			circle(200, 350, 25);
+
+		}
+		//if statments for eyes and limbs and gender
+
+		
+		
+		
 	}
 }
