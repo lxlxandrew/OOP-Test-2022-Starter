@@ -75,7 +75,9 @@ public class Nematode {
     //toString methods
     public String toString()
     {
-        return nemaName;
+        return "Nematode {Name: " + nemaName + " Length: " + nemaLength + "Limbs: " + nemaLimbs +
+                    " Gender: " + nemaGender + " Eyes : " + nemaEyes;
+        
     }
 
     //a constructor that takes a TableRow parameter 
